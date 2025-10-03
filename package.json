@@ -6,12 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:app": "cd ../shura_bot_flutter && flutter build web --release --base-href=/app/ && rm -rf ../website/public/app && mkdir -p ../website/public/app && cp -R build/web/* ../website/public/app"
   },
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.4"
+    "next": "15.5.4",
+    "framer-motion": "12.12.0"
   },
   "devDependencies": {
     "typescript": "^5",
