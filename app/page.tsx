@@ -4,59 +4,123 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <main>
-      {/* Minimal floating hero (no hard card) */}
-      <section className="video-hero" aria-label="Hero">
-        <video className="hero-video" autoPlay muted loop playsInline preload="auto">
-          <source src="/media/hero.mp4" type="video/mp4" />
-        </video>
-        <div className="video-scrim" />
-        <div className="hero-stack">
-          <h1 className="hero-title">Your key to group finance.</h1>
-          <p className="hero-subtitle">
-            Plan goals, track contributions, and decide together—beautifully and compliantly.
-          </p>
-          <div className="cta">
-            <a className="btn btn-primary btn-pill btn-large" href="/app/" target="_blank" rel="noopener noreferrer">Launch Web App</a>
-            <a className="text-cta" href="#preview">Learn more →</a>
+      {/* Fractional.app-inspired Hero Section */}
+      <section className="hero-section" aria-label="Hero">
+        <div className="hero-background">
+          <div className="hero-gradient" />
+        </div>
+        <div className="container hero-container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Own together, grow together
+            </h1>
+            <p className="hero-subtitle">
+              The first AI-powered platform for halal group finance. Create investment pools, make decisions democratically, and build wealth as a community—all while staying compliant with Islamic principles.
+            </p>
+            <div className="hero-cta">
+              <a className="btn btn-primary btn-large" href="/app/" target="_blank" rel="noopener noreferrer">
+                Start Your Group
+              </a>
+              <a className="btn btn-outline btn-large" href="#how-it-works">
+                How It Works
+              </a>
+            </div>
+            <div className="hero-stats">
+              <div className="stat">
+                <div className="stat-number">500+</div>
+                <div className="stat-label">Active Groups</div>
+              </div>
+              <div className="stat">
+                <div className="stat-number">$2M+</div>
+                <div className="stat-label">Pooled Capital</div>
+              </div>
+              <div className="stat">
+                <div className="stat-number">100%</div>
+                <div className="stat-label">Shariah Compliant</div>
+              </div>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-card">
+              <div className="card-header">
+                <div className="card-dots">
+                  <span className="dot red"></span>
+                  <span className="dot yellow"></span>
+                  <span className="dot green"></span>
+                </div>
+                <div className="card-title">ShūrāBot Dashboard</div>
+              </div>
+              <div className="card-content">
+                <div className="dashboard-preview">
+                  <div className="preview-section">
+                    <h4>Your Groups</h4>
+                    <div className="group-item">
+                      <div className="group-info">
+                        <span className="group-name">Masjid Community</span>
+                        <span className="group-progress">$12,400 / $15,000</span>
+                      </div>
+                      <div className="progress-bar">
+                        <div className="progress-fill" style={{width: '82%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-        {/* Live preview in its own section */}
-        <section id="preview" className="section">
-          <div className="container">
-            <div className="preview-header">
-              <h2>Experience ShūrāBot</h2>
-              <p className="lede">Try the full app right here. Create groups, track progress, and explore AI-powered insights.</p>
-            </div>
-            <div className="hero-preview">
-              <div className="preview-frame">
-                <iframe 
-                  title="ShūrāBot Live Preview" 
-                  src="/app/" 
-                  className="app-frame"
-                  allow="camera; microphone; clipboard-read; clipboard-write"
-                />
-                <div className="frame-overlay">
-                  <div className="frame-controls">
-                    <div className="control-dot red"></div>
-                    <div className="control-dot yellow"></div>
-                    <div className="control-dot green"></div>
+      {/* How It Works Section - Fractional.app style */}
+      <section id="how-it-works" className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>How it works</h2>
+            <p className="lede">Get started in three simple steps. No complex setup, no hidden fees.</p>
+          </div>
+          <div className="steps-container">
+            <div className="step">
+              <div className="step-number">1</div>
+              <div className="step-content">
+                <h3>Create your group</h3>
+                <p>Set your investment goal, invite members, and define contribution amounts. Our AI helps optimize your group structure for maximum success.</p>
+                <div className="step-visual">
+                  <div className="visual-card">
+                    <div className="card-icon">👥</div>
+                    <div className="card-text">Group Setup</div>
                   </div>
-                  <div className="frame-title">ShūrāBot Dashboard</div>
                 </div>
               </div>
-              <div className="preview-actions">
-                <a className="btn btn-primary" href="/app/" target="_blank" rel="noopener noreferrer">
-                  Open Full App
-                </a>
-                <a className="btn btn-secondary" href="#features">
-                  Learn More
-                </a>
+            </div>
+            <div className="step">
+              <div className="step-number">2</div>
+              <div className="step-content">
+                <h3>Pool your capital</h3>
+                <p>Members contribute monthly through secure, Shariah-compliant transactions. Track progress in real-time with transparent reporting.</p>
+                <div className="step-visual">
+                  <div className="visual-card">
+                    <div className="card-icon">💰</div>
+                    <div className="card-text">Capital Pooling</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="step">
+              <div className="step-number">3</div>
+              <div className="step-content">
+                <h3>Invest together</h3>
+                <p>Make investment decisions democratically. Our AI provides halal investment options and the group votes on opportunities.</p>
+                <div className="step-visual">
+                  <div className="visual-card">
+                    <div className="card-icon">📈</div>
+                    <div className="card-text">Smart Investing</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Groups */}
       <section id="groups" className="section alt">

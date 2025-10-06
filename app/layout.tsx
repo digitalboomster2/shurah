@@ -27,15 +27,11 @@ export default function RootLayout({
               <span>ShūrāBot</span>
             </div>
             <nav className="nav-links">
-             <a href="#groups">Groups</a>
-             <a href="#proposals">Proposals</a>
-             <a href="#insights">Insights</a>
+              <a href="#how-it-works">How it works</a>
               <a href="#features">Features</a>
-              <a href="#shariah">Shariah</a>
               <a href="#pricing">Pricing</a>
-              <a href="#case-study">Case Study</a>
-              <a href="#download">Download</a>
-              <a className="btn btn-primary" href="/app/" target="_blank" rel="noopener noreferrer">Launch App</a>
+              <a href="#about">About</a>
+              <a className="btn btn-primary" href="/app/" target="_blank" rel="noopener noreferrer">Get Started</a>
             </nav>
           </div>
         </header>
